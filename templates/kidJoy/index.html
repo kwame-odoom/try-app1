@@ -1,0 +1,280 @@
+{% extends 'kidJoy/base.html' %} {% load static %} {% block title %} Home |
+KiddyJoy {% endblock%} {% block navbar%}
+<ul>
+  <li><a class="active" href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'about' %}">About</a></li>
+  <li><a href="{% url 'donate' %}">Donate</a></li>
+  <li><a href="{% url 'team' %}">Team</a></li>
+  <li class="dropdown">
+    <a href="#"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="{% url 'all-projects' %}">All Projects</a></li>
+      <li><a href="{% url 'upcoming-projects' %}">Upcoming Projects</a></li>
+      <li><a href="{% url 'ongoing-projects' %}">Ongoing Projects</a></li>
+      <li><a href="{% url 'past-projects' %}">Past Projects</a></li>
+    </ul>
+  </li>
+  <li><a href="{% url 'contact' %}">Contact Us</a></li>
+  <li><a href="{% url 'join-team' %}">Join Our Team</a></li>
+</ul>
+{% endblock %} {% block hero%}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+  <div
+    id="heroCarousel"
+    class="container carousel carousel-fade"
+    data-bs-ride="carousel"
+    data-bs-interval="5000"
+  >
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">
+          Welcome to <span>KiddyJoy Foundation</span>
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          We are glad to have you here. Take sometime to look through our
+          website and help us brighten the smiles of children.
+        </p>
+        <a
+          href="#why-us"
+          class="btn-get-started animate__animated animate__fadeInUp"
+          >Why Us</a
+        >
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">
+          No Amount Is Too Small
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          Be the reason people believe in humanity! Any amount you give will go
+          a long way to put a smile on a someone's face.
+        </p>
+        <a
+          href="{% url 'donate' %}"
+          class="btn-get-started animate__animated animate__fadeInUp"
+          >Donate Now</a
+        >
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">
+          Want To Be A Volunteer?
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          Dedication is the greatest form of sacrifice. Join us in creating a better future for children in need.
+        </p>
+        <a href="{% url 'join-team' %}" class="btn-get-started animate__animated animate__fadeInUp"
+          >Join Our Team</a
+        >
+      </div>
+    </div>
+
+    <a
+      class="carousel-control-prev"
+      href="#heroCarousel"
+      role="button"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon bx bx-chevron-left"
+        aria-hidden="true"
+      ></span>
+    </a>
+
+    <a
+      class="carousel-control-next"
+      href="#heroCarousel"
+      role="button"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon bx bx-chevron-right"
+        aria-hidden="true"
+      ></span>
+    </a>
+  </div>
+</section>
+{% endblock %}
+<!-- End Hero -->
+{% block content%}
+<main id="main">
+  <!-- ======= Why Us Section ======= -->
+  <section
+    class="why-us section-bg"
+    id="why-us"
+    data-aos="fade-up"
+    date-aos-delay="200 "
+  >
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Us</h2>
+        <p>
+          We believe that every child deserves the opportunity to reach their
+          full potential and lead a healthy, fulfilling life. Our dedicated team
+          of professionals is committed to making a positive impact in the lives
+          of children in need. We have a proven track record of success in
+          providing education, healthcare, and community support services, and
+          we are constantly looking for ways to improve and expand our
+          programs.Our focus is on sustainable solutions, ensuring that the
+          benefits of our programs continue long after our involvement. We are
+          committed to transparency and accountability, and we regularly
+          evaluate and report on our progress and impact.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 video-box">
+          <img
+            src="{% static 'kidJoy/img/why-us.jpeg' %}"
+            class="img-fluid"
+            alt=""
+          />
+          <a
+            href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
+            class="venobox play-btn mb-4"
+            data-vbtype="video"
+            data-autoplay="true"
+          ></a>
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-health"></i></div>
+            <h4 class="title"><a href="">Previous Health Care Programs</a></h4>
+            <p class="description">
+              Our previous healthcare programs have focused on providing access to essential medical services, such as check-ups, and treatments.
+            </p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-gift"></i></div>
+            <h4 class="title"><a href="">Previous Donations</a></h4>
+            <p class="description">
+              Thanks to the generosity of our donors, we have been able to provide education, healthcare, and community support services to some children in need.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Why Us Section -->
+
+  <!-- ======= Features Section ======= -->
+  <section class="features" id="goals">
+    <div class="container">
+      <div class="section-title">
+        <h2>Mission and Goals</h2>
+        <p>
+          Our mission is to empower and improve the lives of children in need
+          through education, healthcare, and community support. We strive to
+          create a brighter future for all children by providing access to the
+          resources and opportunities they need to reach their full potential.
+        </p>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-5">
+          <img
+            src="{% static 'kidJoy/img/index-education.jpeg' %}"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-7 pt-4">
+          <h3>Education</h3>
+          <p class="fst-italic">
+            To provide access to quality education and lifelong learning
+            opportunities for children in need, and to support their academic
+            and personal development
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-check"></i>Increase access to education and
+              vocational training for children in underprivileged communities.
+            </li>
+            <li>
+              <i class="bi bi-check"></i> Empower children to be active
+              participants in their own development and decision making.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-5 order-1 order-md-2">
+          <img
+            src="{% static 'kidJoy/img/main-health.jpeg' %}"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-7 pt-5 order-2 order-md-1">
+          <h3>Health Care</h3>
+          <p class="fst-italic">
+            Ensure that children in need have access to comprehensive healthcare
+            services and support
+          </p>
+          <p>
+            To provide comprehensive healthcare services and support to children
+            in need, with a focus on preventative care and early intervention.
+            We strive to improve the health and well-being of children by
+            increasing access to quality medical care, promoting healthy
+            lifestyles, and addressing the social determinants of health that
+            affect children and their families. We will work to empower
+            communities to take control of their own health and build a
+            sustainable health care system for future generations.
+          </p>
+        </div>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-5">
+          <img
+            src="{% static 'kidJoy/img/community-support.jpeg' %}"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-7 pt-5">
+          <h3>Community Support</h3>
+          <ul>
+            <li>
+              <i class="bi bi-check"></i>Develop and implement programs that
+              promote children's safety and well-being, including reducing child
+              abuse and neglect.
+            </li>
+            <li>
+              <i class="bi bi-check"></i>Establish and maintain community-based
+              programs that provide support and resources for families and
+              children in need.
+            </li>
+            <li>
+              <i class="bi bi-check"></i> Partner with local organizations,
+              businesses, and government agencies to maximize community support
+              and resources.
+            </li>
+            <li>
+              <i class="bi bi-check"></i> Empower communities to take an active
+              role in addressing the social issues that affect children and
+              their families.
+            </li>
+            <li>
+              <i class="bi bi-check"></i> Provide support and resources to
+              children and families affected by crisis or trauma
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Features Section -->
+</main>
+<!-- End #main -->
+{% endblock %}
